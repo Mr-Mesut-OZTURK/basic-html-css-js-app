@@ -7,6 +7,10 @@
 body {
     color: white;
     background-image: url(./img/ZA-en-20191203-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
 }
 
 #form-container {
