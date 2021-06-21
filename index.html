@@ -27,12 +27,25 @@
             box-sizing: border-box;
         }
 
-        #main-outer-container {}
+        #main-outer-container {
+            background-color: rgba(0, 0, 0, 0.068);
+        }
 
 
 
         /* --------------- main-header ----------------- */
-        #main-header {}
+        #main-header {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.295);
+            margin-bottom: 10px;
+        }
+
+        #main-header img {
+            width: 100%;
+            opacity: 0.8;
+
+        }
 
 
 
@@ -45,27 +58,25 @@
 
         /* --------------- main-header ----------------- */
         #main-main {
-            padding: 5px;
+            padding: 10px;
         }
 
         #main-main h2 {
             text-align: center;
-            font-size: 80px;
+            font-size: 100px;
             padding: 20px 5px;
             font-family: 'Tangerine', cursive;
-
         }
 
         .photo-gallery {
             max-width: 1000px;
-            height: 400px;
+            height: 500px;
             overflow-y: auto;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             padding: 0 4px;
-            /* border: 5px solid black; */
-            outline: 3px solid brown;
+            outline: 6px solid rgba(165, 42, 42, 0.582);
             outline-offset: 5px;
         }
 
@@ -77,9 +88,6 @@
 
         .photo-gallery-column img {
             width: 100%;
-            background-blend-mode: lighten;
-            /* background-color: coral; */
-            padding: 0;
             margin-top: 8px;
             vertical-align: middle;
             text-align: center;
@@ -110,7 +118,21 @@
 
         @media screen and (max-width: 360px) {
             body {
-                background-color: blue;
+                background-color: rgba(255, 208, 0, 0.068);
+            }
+
+            #main-main h2 {
+            font-size: 40px;
+            padding: 10px 5px;
+            margin-bottom: 10px;
+            background-color: rgba(250, 128, 114, 0.418);
+        }
+
+            .photo-gallery {
+                margin: 5px;
+                height: 200px;
+                outline-offset: 0;
+                background-color: rgba(173, 86, 23, 0.514);
             }
         }
     </style>
@@ -121,7 +143,7 @@
 
         <!---------------- HEADER -------------->
         <header id="main-header">
-
+            <img src="./media/backgrounds/header-1(1900x500).jpg" alt="black header" title="Header Modern">
         </header>
 
         <!---------------- NAV -------------->
