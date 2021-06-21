@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,17 @@
     <meta name="description" content="This website is about HTML, CSS and JavaScript">
     <meta name="keywords" content="web, html, css, JavaScript, frontend">
     <meta name="author" content="Mesut OZTURK">
+    <!------------ favicon ------------->
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./media/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!----------------------------------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <title>PALA INDUSTRY | Mesut OZTURK</title>
     <style>
         * {
@@ -15,9 +27,7 @@
             box-sizing: border-box;
         }
 
-        #main-outer-container {
-
-        }
+        #main-outer-container {}
 
 
 
@@ -34,34 +44,46 @@
 
 
         /* --------------- main-header ----------------- */
-        #main-main {}
+        #main-main {
+            padding: 5px;
+        }
+
         #main-main h2 {
             text-align: center;
-            font-size: 40px;
+            font-size: 80px;
             padding: 20px 5px;
+            font-family: 'Tangerine', cursive;
+
         }
+
         .photo-gallery {
-            max-width: 100%;
+            max-width: 1000px;
             height: 400px;
-            overflow-y:auto;
+            overflow-y: auto;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             padding: 0 4px;
+            /* border: 5px solid black; */
+            outline: 3px solid brown;
+            outline-offset: 5px;
         }
+
         .photo-gallery-column {
             flex: 33%;
             max-width: 33%;
             padding: 0 4px;
         }
+
         .photo-gallery-column img {
             width: 100%;
             background-blend-mode: lighten;
-            background-color: coral;
-            padding: 0 4px;
+            /* background-color: coral; */
+            padding: 0;
             margin-top: 8px;
             vertical-align: middle;
             text-align: center;
+            border: 10px groove darkred;
         }
 
 
@@ -78,22 +100,24 @@
                 max-width: 50%;
             }
         }
+
         @media screen and (max-width: 480px) {
             .photo-gallery-column {
                 flex: 100%;
                 max-width: 100%;
             }
         }
+
         @media screen and (max-width: 360px) {
             body {
-                background-color:blue;
+                background-color: blue;
             }
         }
-
     </style>
 </head>
+
 <body>
-   <div id="main-outer-container">
+    <div id="main-outer-container">
 
         <!---------------- HEADER -------------->
         <header id="main-header">
@@ -108,40 +132,46 @@
         <!---------------- MAİN -------------->
         <main id="main-main">
 
-            <h2>PHOTO GALLERY</h2>
+            <h2>photo gallery</h2>
             <section class="photo-gallery">
 
                 <figure class="photo-gallery-column">
                     <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
-                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi" title="osmanli-surre-alayi">
+                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi"
+                        title="osmanli-surre-alayi">
                     <img src="./media/images/3 - osmanli-bazaar.jpg" alt="osmanli-bazaar" title="osmanli-bazaar">
                     <img src="./media/images/4 - bizans-fethi.jpg" alt="bizans-fethi" title="bizans-fethi">
                     <img src="./media/images/5 - ayasofya.jpg" alt="ayasofya" title="ayasofya">
                     <img src="./media/images/6 - tarihi-resim.jpg" alt="tarihi-resim" title="tarihi-resim">
-                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari" title="osmanli-kapali-pazari">
+                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari"
+                        title="osmanli-kapali-pazari">
                 </figure>
 
                 <figure class="photo-gallery-column">
                     <img src="./media/images/8 - osmanli-muzik.jpg" alt="osmanli-muzik" title="osmanli-muzik">
-                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs" title="osmanli-tahta-cıkıs">
+                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs"
+                        title="osmanli-tahta-cıkıs">
                     <img src="./media/images/10 - osmanli-egitim.jpg" alt="osmanli-egitim" title="osmanli-egitim">
                     <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
-                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi" title="osmanli-surre-alayi">
+                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi"
+                        title="osmanli-surre-alayi">
                     <img src="./media/images/3 - osmanli-bazaar.jpg" alt="osmanli-bazaar" title="osmanli-bazaar">
                     <img src="./media/images/4 - bizans-fethi.jpg" alt="bizans-fethi" title="bizans-fethi">
 
                 </figure>
-                    
+
                 <figure class="photo-gallery-column">
                     <img src="./media/images/5 - ayasofya.jpg" alt="ayasofya" title="ayasofya">
                     <img src="./media/images/6 - tarihi-resim.jpg" alt="tarihi-resim" title="tarihi-resim">
-                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari" title="osmanli-kapali-pazari">
+                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari"
+                        title="osmanli-kapali-pazari">
                     <img src="./media/images/8 - osmanli-muzik.jpg" alt="osmanli-muzik" title="osmanli-muzik">
-                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs" title="osmanli-tahta-cıkıs">
+                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs"
+                        title="osmanli-tahta-cıkıs">
                     <img src="./media/images/10 - osmanli-egitim.jpg" alt="osmanli-egitim" title="osmanli-egitim">
                     <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
                 </figure>
- 
+
             </section>
         </main>
 
@@ -150,6 +180,7 @@
 
         </footer>
 
-   </div>
+    </div>
 </body>
+
 </html>
