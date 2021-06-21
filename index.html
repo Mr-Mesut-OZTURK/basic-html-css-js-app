@@ -49,7 +49,7 @@
 
 
 
-        /* --------------- main-header ----------------- */
+        /* --------------- main-nav ----------------- */
         #main-nav {
             width: 100%;
             min-height: 100px;
@@ -61,16 +61,35 @@
             align-items: center;
             justify-content: space-between;
             background-color: rgba(112, 128, 144, 0.829);
-
         }
-
         #main-nav:hover {
             background-color: rgba(125, 166, 206, 0.89);
         }
-        
+
+        /* -------- HİDDEN MENU ------------------- */
         /* -------- When wiht less than 720px it will be active */
         #main-nav div:nth-of-type(1) {
             display: none;
+            margin-left: 20px;
+        }
+        .hiden-navbar {
+            background-color: rgba(0, 0, 0, 0.685);
+            padding: 20px 15px;
+            border-radius: 10px;
+            color: cornsilk;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .hiden-navbar:hover {
+            background-color: rgb(0, 0, 0);
+            padding: 25px 18px;
+            border-radius: 0;
+            outline-offset: -8px;
+            outline: 2px solid white;
+            color: crimson;
+            box-shadow: 0 50px 20px 1px  rgba(0, 0, 0, 0.39);
+
         }
 
 
@@ -91,18 +110,43 @@
             min-height: 100px;
             padding: 40px 3px;
             margin-right: 1px;
-            color:rgb(78, 11, 11);
+            color: rgb(78, 11, 11);
             flex: 1 1 auto;
             text-align: center;
             font-size: 17px;
-            /* font-weight: 400; */
+            
         }
         #main-nav div:nth-of-type(2) a:hover {
             background-color: maroon;
             color: moccasin;
         }
+
+
+
+
+        /* ----------- NAVBAR  SEARCH ----------------- */
         #main-nav div:nth-of-type(3) {
             flex-basis: 35%;
+        }
+        #main-nav div:nth-of-type(3) input {
+            width: 60%;
+            padding: 10px 20px;
+            outline: none;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+        #main-nav div:nth-of-type(3) button {
+            padding: 12px 16px;
+            background-color: rgb(59, 224, 59);
+            border-radius: 7px;
+            border: none;
+            cursor: pointer;
+        }
+        #main-nav div:nth-of-type(3) button:hover {
+            background-color: rgb(8, 245, 8);
+            border-radius: 7px;
+            border: initial;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.185);
         }
 
 
@@ -156,14 +200,29 @@
 
 
 
-        
+
         @media screen and (max-width: 720px) {
             #main-nav div:nth-of-type(1) {
-            display:initial
+                display: initial;
+                background-color: 
+            }
+
+            #main-nav div:nth-of-type(2) {
+                display: none;
+            }
+
+            #main-nav div:nth-of-type(1) button:hover > #main-nav div:nth-of-type(2) {
+                display: block;
+                position: fixed;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            #main-nav div:nth-of-type(3) {
+            flex-basis: 70%;
         }
-        #main-nav div:nth-of-type(2) {
-            display: none;
-        }
+
             .photo-gallery-column {
                 flex: 50%;
                 max-width: 50%;
@@ -183,11 +242,11 @@
             }
 
             #main-main h2 {
-            font-size: 40px;
-            padding: 10px 5px;
-            margin-bottom: 10px;
-            background-color: rgba(250, 128, 114, 0.418);
-        }
+                font-size: 40px;
+                padding: 10px 5px;
+                margin-bottom: 10px;
+                background-color: rgba(250, 128, 114, 0.418);
+            }
 
             .photo-gallery {
                 margin: 5px;
