@@ -35,6 +35,34 @@
 
         /* --------------- main-header ----------------- */
         #main-main {}
+        #main-main h2 {
+            text-align: center;
+            font-size: 40px;
+            padding: 20px 5px;
+        }
+        .photo-gallery {
+            max-width: 100%;
+            height: 400px;
+            overflow-y:auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        .photo-gallery-column {
+            flex: 33%;
+            max-width: 33%;
+            padding: 0 4px;
+        }
+        .photo-gallery-column img {
+            width: 100%;
+            background-blend-mode: lighten;
+            background-color: coral;
+            padding: 0 4px;
+            margin-top: 8px;
+            vertical-align: middle;
+            text-align: center;
+        }
 
 
 
@@ -45,13 +73,15 @@
 
 
         @media screen and (max-width: 720px) {
-            body {
-                background-color:red;
+            .photo-gallery-column {
+                flex: 50%;
+                max-width: 50%;
             }
         }
         @media screen and (max-width: 480px) {
-            body {
-                background-color:yellow;
+            .photo-gallery-column {
+                flex: 100%;
+                max-width: 100%;
             }
         }
         @media screen and (max-width: 360px) {
@@ -78,6 +108,41 @@
         <!---------------- MAİN -------------->
         <main id="main-main">
 
+            <h2>PHOTO GALLERY</h2>
+            <section class="photo-gallery">
+
+                <figure class="photo-gallery-column">
+                    <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
+                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi" title="osmanli-surre-alayi">
+                    <img src="./media/images/3 - osmanli-bazaar.jpg" alt="osmanli-bazaar" title="osmanli-bazaar">
+                    <img src="./media/images/4 - bizans-fethi.jpg" alt="bizans-fethi" title="bizans-fethi">
+                    <img src="./media/images/5 - ayasofya.jpg" alt="ayasofya" title="ayasofya">
+                    <img src="./media/images/6 - tarihi-resim.jpg" alt="tarihi-resim" title="tarihi-resim">
+                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari" title="osmanli-kapali-pazari">
+                </figure>
+
+                <figure class="photo-gallery-column">
+                    <img src="./media/images/8 - osmanli-muzik.jpg" alt="osmanli-muzik" title="osmanli-muzik">
+                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs" title="osmanli-tahta-cıkıs">
+                    <img src="./media/images/10 - osmanli-egitim.jpg" alt="osmanli-egitim" title="osmanli-egitim">
+                    <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
+                    <img src="./media/images/2-osmanli-surre-alayi.jpg" alt="osmanli-surre-alayi" title="osmanli-surre-alayi">
+                    <img src="./media/images/3 - osmanli-bazaar.jpg" alt="osmanli-bazaar" title="osmanli-bazaar">
+                    <img src="./media/images/4 - bizans-fethi.jpg" alt="bizans-fethi" title="bizans-fethi">
+
+                </figure>
+                    
+                <figure class="photo-gallery-column">
+                    <img src="./media/images/5 - ayasofya.jpg" alt="ayasofya" title="ayasofya">
+                    <img src="./media/images/6 - tarihi-resim.jpg" alt="tarihi-resim" title="tarihi-resim">
+                    <img src="./media/images/7 - osmanli-kapali-pazari.jpg" alt="osmanli-kapali-pazari" title="osmanli-kapali-pazari">
+                    <img src="./media/images/8 - osmanli-muzik.jpg" alt="osmanli-muzik" title="osmanli-muzik">
+                    <img src="./media/images/9 - osmanli-tahta-cıkıs.jpg" alt="osmanli-tahta-cıkıs" title="osmanli-tahta-cıkıs">
+                    <img src="./media/images/10 - osmanli-egitim.jpg" alt="osmanli-egitim" title="osmanli-egitim">
+                    <img src="./media/images/1 - osmanli-kadilari.jpg" alt="osmanli-kadilari" title="osmanli-kadilari">
+                </figure>
+ 
+            </section>
         </main>
 
         <!---------------- FOOTER -------------->
