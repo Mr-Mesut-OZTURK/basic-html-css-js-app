@@ -60,10 +60,10 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            background-color: rgba(112, 128, 144, 0.829);
+            background-color: rgba(0, 128, 255, 0.527);
         }
         #main-nav:hover {
-            background-color: rgba(125, 166, 206, 0.89);
+            background-color: rgba(96, 172, 248, 0.89);
         }
 
         /* -------- HİDDEN MENU ------------------- */
@@ -90,7 +90,15 @@
             color: crimson;
             box-shadow: 0 50px 20px 1px  rgba(0, 0, 0, 0.39);
 
+            /* ----- burası yandan açılır menuler için ------ */
+            /* position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background-color: blueviolet; */
         }
+
 
 
         /* ------------- MENU ----------------- */
@@ -132,8 +140,15 @@
             width: 60%;
             padding: 10px 20px;
             outline: none;
+            border: none;
             border-radius: 20px;
             font-size: 15px;
+        }
+        #main-nav div:nth-of-type(3) input:hover {
+           border: 1px solid blue;
+        }
+        #main-nav div:nth-of-type(3) input:focus {
+            background-color: rgba(0, 128, 255, 0);
         }
         #main-nav div:nth-of-type(3) button {
             padding: 12px 16px;
@@ -204,7 +219,7 @@
         @media screen and (max-width: 720px) {
             #main-nav div:nth-of-type(1) {
                 display: initial;
-                background-color: 
+                margin-left: 5px;
             }
 
             #main-nav div:nth-of-type(2) {
@@ -250,9 +265,17 @@
 
             .photo-gallery {
                 margin: 5px;
-                height: 200px;
+                height: 250px;
                 outline-offset: 0;
                 background-color: rgba(173, 86, 23, 0.514);
+            }
+        }
+        @media screen and (max-width: 330px) {
+            #main-nav div:nth-of-type(3) {
+                display: none;
+            }
+            #main-nav div:nth-of-type(1) {
+                margin: auto;
             }
         }
     </style>
