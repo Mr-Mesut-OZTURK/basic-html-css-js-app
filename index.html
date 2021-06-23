@@ -36,13 +36,19 @@
         /* --------------- main-header ----------------- */
         #main-header {
             width: 100%;
+            min-height: 200px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.295);
+            /* background-color: rgb(252, 10, 10); */
+            background-image: url(./media/backgrounds/header-2\(1500x395\).jpg);
+            background-size: auto;
+            /* mix-blend-mode:soft-light; */
         }
 
         #main-header img {
+            height: 200px;
             width: 100%;
             opacity: 0.8;
+            display: none;
 
         }
 
@@ -189,6 +195,7 @@
             padding: 0 4px;
             outline: 6px solid rgba(165, 42, 42, 0.582);
             outline-offset: 5px;
+            position: relative;
         }
 
         .photo-gallery-column {
@@ -203,7 +210,18 @@
             vertical-align: middle;
             text-align: center;
             border: 10px groove darkred;
+            transition-duration: 2s;
+
         }
+        /* Eğer üst elementte sabit genişlikte olsa 
+            güzel efekt olur
+        .photo-gallery-column img:hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition-duration: 2s;
+        } */
 
 
 
