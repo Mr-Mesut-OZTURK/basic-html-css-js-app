@@ -1,4 +1,4 @@
-/* style.css */
+/*---------------- style.css ------------------*/
 
 * {
     margin: 0;
@@ -7,271 +7,34 @@
 }
 
 #main-outer-container {
-    background-color: rgba(0, 0, 0, 0.068);
+   
 }
-
-
-
-/* --------------- main-header ----------------- */
-#main-header {
-    width: 100%;
-    min-height: 200px;
-    text-align: center;
-    /* background-color: rgb(252, 10, 10); */
-    /* background-image: url(./media/backgrounds/header-2\(1500x395\).jpg); */
-    /* background-size: auto; */
-    /* mix-blend-mode:soft-light; */
-}
-
-#main-header img {
-    height: 200px;
-    width: 100%;
-    opacity: 0.8;
-    display: none;
-
-}
-
-
-
-
-/* --------------- main-nav ----------------- */
-#main-nav {
-    width: 100%;
-    min-height: 100px;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 128, 255, 0.527);
-}
-#main-nav:hover {
-    background-color: rgba(96, 172, 248, 0.89);
-}
-
-/* -------- HİDDEN MENU ------------------- */
-/* -------- When wiht less than 720px it will be active */
-#main-nav div:nth-of-type(1) {
-    display: none;
-    margin-left: 20px;
-}
-.hiden-navbar {
-    background-color: rgba(0, 0, 0, 0.685);
-    padding: 20px 15px;
-    border-radius: 10px;
-    color: cornsilk;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-}
-.hiden-navbar:hover {
-    background-color: rgb(0, 0, 0);
-    padding: 25px 18px;
-    border-radius: 0;
-    outline-offset: -8px;
-    outline: 2px solid white;
-    color: crimson;
-    box-shadow: 0 50px 20px 1px  rgba(0, 0, 0, 0.39);
-
-    /* ----- burası yandan açılır menuler için ------ */
-    /* position: fixed;
-    left: 0;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    background-color: blueviolet; */
-}
-
-
-
-/* ------------- MENU ----------------- */
-/* -------- When wiht less than 720px it will not be active */
-#main-nav div:nth-of-type(2) {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-#main-nav div:nth-of-type(2) a {
-    /* background-color:mediumturquoise; */
-    text-decoration: none;
-    display: block;
-    min-height: 100px;
-    padding: 40px 3px;
-    margin-right: 1px;
-    color: rgb(78, 11, 11);
-    flex: 1 1 auto;
-    text-align: center;
-    font-size: 17px;
-    
-}
-#main-nav div:nth-of-type(2) a:hover {
-    background-color: maroon;
-    color: moccasin;
-}
-
-
-
-
-/* ----------- NAVBAR  SEARCH ----------------- */
-#main-nav div:nth-of-type(3) {
-    flex-basis: 35%;
-}
-#main-nav div:nth-of-type(3) input {
-    width: 60%;
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    font-size: 15px;
-}
-#main-nav div:nth-of-type(3) input:hover {
-   border: 1px solid blue;
-}
-#main-nav div:nth-of-type(3) input:focus {
-    background-color: rgba(0, 128, 255, 0);
-}
-#main-nav div:nth-of-type(3) button {
-    padding: 12px 16px;
-    background-color: rgb(59, 224, 59);
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-}
-#main-nav div:nth-of-type(3) button:hover {
-    background-color: rgb(8, 245, 8);
-    border-radius: 7px;
-    border: initial;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.185);
-}
-
-
 
 
 /* --------------- main-main ----------------- */
 #main-main {
-    padding: 10px;
-}
-
-#main-main h2 {
-    text-align: center;
-    font-size: 100px;
-    padding: 20px 5px;
-    font-family: 'Tangerine', cursive;
-}
-
-.photo-gallery {
-    max-width: 1000px;
-    height: 500px;
-    overflow-y: auto;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    outline: 6px solid rgba(165, 42, 42, 0.582);
-    outline-offset: 5px;
-    position: relative;
-}
-
-.photo-gallery-column {
-    flex: 33%;
-    max-width: 33%;
-    padding: 0 4px;
-}
-
-.photo-gallery-column img {
     width: 100%;
-    margin-top: 8px;
-    vertical-align: middle;
-    text-align: center;
-    border: 10px groove darkred;
-    transition-duration: 2s;
-
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #757f9a, #d7dde8);
+    background-attachment: fixed;
+    padding: 20px 10px;
 }
-/* Eğer üst elementte sabit genişlikte olsa 
-    güzel efekt olur
-.photo-gallery-column img:hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition-duration: 2s;
-} */
 
 
-
-
-/* --------------- main-header ----------------- */
+/* --------------- main-footer ----------------- */
 #main-footer {
     min-height: 200px;
+    background-color:moccasin;
 }
 
 
 
 
-@media screen and (max-width: 720px) {
-    #main-nav div:nth-of-type(1) {
-        display: initial;
-        margin-left: 5px;
-    }
+@media screen and (max-width: 720px) {}
+   
 
-    #main-nav div:nth-of-type(2) {
-        display: none;
-    }
+@media screen and (max-width: 480px) {}
 
-    #main-nav div:nth-of-type(1) button:hover > #main-nav div:nth-of-type(2) {
-        display: block;
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        background-color: red;
-    }
+@media screen and (max-width: 360px) {}
 
-    #main-nav div:nth-of-type(3) {
-    flex-basis: 70%;
-}
-
-    .photo-gallery-column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .photo-gallery-column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    body {
-        background-color: rgba(255, 208, 0, 0.068);
-    }
-
-    #main-main h2 {
-        font-size: 40px;
-        padding: 10px 5px;
-        margin-bottom: 10px;
-        background-color: rgba(250, 128, 114, 0.418);
-    }
-
-    .photo-gallery {
-        margin: 5px;
-        height: 250px;
-        outline-offset: 0;
-        background-color: rgba(173, 86, 23, 0.514);
-    }
-}
-@media screen and (max-width: 330px) {
-    #main-nav div:nth-of-type(3) {
-        display: none;
-    }
-    #main-nav div:nth-of-type(1) {
-        margin: auto;
-    }
-}
+@media screen and (max-width: 330px) {}
