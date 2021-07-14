@@ -18,8 +18,8 @@
     min-height: 200px;
     text-align: center;
     /* background-color: rgb(252, 10, 10); */
-    background-image: url(./media/backgrounds/header-2\(1500x395\).jpg);
-    background-size: auto;
+    /* background-image: url(./media/backgrounds/header-2\(1500x395\).jpg); */
+    /* background-size: auto; */
     /* mix-blend-mode:soft-light; */
 }
 
@@ -152,7 +152,7 @@
 
 
 
-/* --------------- main-header ----------------- */
+/* --------------- main-main ----------------- */
 #main-main {
     padding: 10px;
 }

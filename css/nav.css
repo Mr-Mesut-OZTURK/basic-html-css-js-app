@@ -1,0 +1,141 @@
+/* ------------------- NAV ------------------ */
+nav {
+    background: linear-gradient(to bottom right, purple, orange);
+    background-attachment: fixed;
+    background-size:cover;
+    transition-duration: 2s;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+nav ul li {
+    height: 70px;
+    display: flex;
+
+}
+
+nav ul li span {
+    font-size: 30px;
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition-duration: 1s;
+    color: khaki;
+}
+
+nav ul li a:hover {
+    background-color: rgb(248, 177, 25);
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media all and (max-width:860px) {
+    nav {
+        transition-duration: 2s;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        transition-duration: 2s;
+
+    }
+}
+
+@media all and (max-width:768px) {
+
+    nav {
+        width: 100px;
+        height: 120px;
+        background: linear-gradient(purple, orange);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition-duration: 2s;
+    }
+
+    nav:hover {
+        height: 100%;
+        background-color: darkseagreen;
+        transition-duration: 0.5s;
+    }
+
+    nav:hover ul {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav:hover span {
+        display: block;
+        padding-left: 35px;
+        width: 100%;
+        height: 70px;
+    }
+
+    nav:hover .hidden {
+        color: rgb(9, 255, 0);
+        font-size: 60px;
+        margin: 25px 25px 30px;
+        transition-duration: 2s;
+
+    }
+
+    nav ul li {
+        width: 100%;
+        transition-duration: 4s;
+    }
+
+    nav ul li:hover {
+        width: 300px;
+        background-color: lemonchiffon;
+        transition-duration: 0.5s;
+    }
+
+    nav ul li:hover span {
+        display: none;
+    }
+
+    nav ul li:hover a {
+        display: block;
+    }
+
+    nav ul li span {
+        padding: 18px;
+
+    }
+
+    nav ul li a {
+        display: none;
+        padding-top: 18px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .hidden {
+        display: block;
+        margin: 30px;
+        font-size: 50px;
+        margin-bottom: 70px;
+
+    }
+}
