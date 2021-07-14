@@ -7,7 +7,8 @@
 }
 
 #main-outer-container {
-   
+    min-width: 300px;
+    border: solid;
 }
 
 
@@ -17,23 +18,79 @@
     min-height: 100vh;
     background: linear-gradient(to bottom right, #757f9a, #d7dde8);
     background-attachment: fixed;
-    padding: 20px 10px;
+    padding: 100px 10px;
+}
+
+
+
+
+/* ----------------------- project-section ------------------ */
+#projects-container {
+    width: 90%;
+    min-height: 100vh;
+    border: solid;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: auto;
+    place-content: center;
+    grid-gap: 1rem;
+    padding: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-container {
+    border: solid;
+    /* position: relative; */
+    /* box-sizing: content-box; */
+    border: 2px solid #e7e7e7;
+    border-radius: 4px;
+    /* padding: .5rem; */
+    background: linear-gradient(#1fa2ff, #12d8fa, #a6ffcb);
+    background-attachment: fixed;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.205);
+    /* height: 245px; */
+    
+}
+
+.card-container img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+    
+}
+
+.project-content {
+    padding: 1em;
+    text-align: center;
+    font-size: 2em;
 }
 
 
 /* --------------- main-footer ----------------- */
 #main-footer {
     min-height: 200px;
-    background-color:moccasin;
+    background-color: moccasin;
+}
+
+@media screen and (max-width: 720px) {
+    #project-section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
 }
 
 
-
-
-@media screen and (max-width: 720px) {}
-   
-
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+    #project-section {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+    }
+}
 
 @media screen and (max-width: 360px) {}
 

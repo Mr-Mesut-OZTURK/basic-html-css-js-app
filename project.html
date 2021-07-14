@@ -21,12 +21,14 @@
     <!-----------------  CND --------------------->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <title>PALA INDUSTRY | Mesut OZTURK</title>
-   
+
 </head>
 
 <body>
@@ -67,18 +69,30 @@
 
         <!---------------- MAİN -------------->
         <main id="main-main">
-            <style>
-                h2 {
-                    text-align: center;
-                    font-size: 3em;
-                    margin-top: 30%;
-                    font-size: 72px;
-                    background: -webkit-linear-gradient(purple, orange);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            </style>
-            <h2>PROJE SAYFASI YAPIM AŞAMASINDADIR</h2>
+
+
+            <section id="projects-container">
+
+                <a href="" class="project-link">
+                    <div class="card-container">
+
+                        <img src="./media/project-images/ios-calculator.jpg" alt="">
+
+                        <article class="project-content">
+                            <h3>project</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Alias hic vitae voluptatum
+                                fuga veniam nihil voluptatem,
+                                sequi sit a iure?
+                            </p>
+                        </article>
+                    </div>
+                </a>
+
+            </section>
+
         </main>
 
         <!---------------- FOOTER -------------->
@@ -87,6 +101,33 @@
         </footer>
 
     </div>
+
+    <script>
+        let projects = ["ios-calculator.html", "find-number.html", ""];
+        const psection = document.getElementById("projects-container");
+
+        projects.forEach(element => {
+            psection.innerHTML += `
+            <a href="" class="project-link">
+                    <div class="card-container">
+
+                        <img src="./media/project-images/ios-calculator.jpg" alt="">
+
+                        <article class="project-content">
+                            <h3>project</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Alias hic vitae voluptatum
+                                fuga veniam nihil voluptatem,
+                                sequi sit a iure?
+                            </p>
+                        </article>
+                    </div>
+                </a>
+            `
+        });
+    </script>
 </body>
 
 </html>
