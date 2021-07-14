@@ -21,10 +21,8 @@
     <!-----------------  CND --------------------->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/project.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <title>PALA INDUSTRY | Mesut OZTURK</title>
@@ -73,19 +71,16 @@
 
             <section id="projects-container">
 
-                <a href="" class="project-link">
+                <a href="./lessons/netflix-survey-form.html" class="project-link">
                     <div class="card-container">
 
-                        <img src="./media/project-images/ios-calculator.jpg" alt="">
+                        <img src="./media/project-images/netflix-surver-form.jpg" alt="">
 
                         <article class="project-content">
-                            <h3>project</h3>
+                            <h3>Netflix surver form</h3>
                             <p>
                                 Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit.
-                                Alias hic vitae voluptatum
-                                fuga veniam nihil voluptatem,
-                                sequi sit a iure?
                             </p>
                         </article>
                     </div>
@@ -103,24 +98,31 @@
     </div>
 
     <script>
-        let projects = ["ios-calculator.html", "find-number.html", ""];
+        let projects = [
+            "facebook-sign-in", 
+            "instagram-sign-in",
+            "ios-calculator", 
+            "netflix-surver-form",
+            "facebook-sign-in", 
+            "instagram-sign-in",
+            "ios-calculator"];
+
         const psection = document.getElementById("projects-container");
 
+
         projects.forEach(element => {
+
             psection.innerHTML += `
-            <a href="" class="project-link">
+            <a href="./lessons/${element}.html" class="project-link">
                     <div class="card-container">
 
-                        <img src="./media/project-images/ios-calculator.jpg" alt="">
+                        <img src="./media/project-images/${element}.jpg" alt="">
 
                         <article class="project-content">
-                            <h3>project</h3>
+                            <h3>${element}</h3>
                             <p>
                                 Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit.
-                                Alias hic vitae voluptatum
-                                fuga veniam nihil voluptatem,
-                                sequi sit a iure?
                             </p>
                         </article>
                     </div>
