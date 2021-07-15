@@ -88,6 +88,74 @@
             border-radius: 10px;
         }
 
+        /* ------------- CARD FRONT -------------- */
+        #card-front {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        #card-front:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: cornsilk;
+            box-shadow: 0 0 60px 2px cyan, 0 0 40px 2px cyan inset;
+
+        }
+
+        #header {
+            font-size: 2em;
+            margin: 20px auto;
+        }
+
+        #input {
+            margin: 20px auto;
+            padding: 10px;
+            width: 50%;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            text-align: center;
+            color: darkred;
+        }
+        #input:focus {
+            box-shadow: 0 0 40px 2px cyan, 0 0 20px 2px cyan inset;
+        }
+
+        #button {
+            display: block;
+            margin: auto;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(87, 75, 6);
+            padding: 10px;
+            background-color: lawngreen;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        #button:hover {
+            box-shadow: 0 0 40px 2px lawngreen, 0 0 20px 2px lawngreen inset;
+        }
+        #button:active {
+            border: solid;
+        }
+        
+
+        /* ------------- CARD BACK -------------- */
+        #card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            font-size: 3em;
+            padding-top: 50px;
+        }
+
+        #shadow {
+            width: 60%;
+            margin: 200px auto 0;
+            background-color: black;
+            box-shadow: 0 0 100px 25px black;
+            transition-duration: 3s;
+        }
     </style>
 </head>
 <body>
