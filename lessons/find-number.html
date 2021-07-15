@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-          * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -24,7 +25,7 @@
         } */
 
         #reset-button {
-            
+
             display: block;
             margin: auto;
             font-size: 30px;
@@ -35,11 +36,13 @@
             border: none;
             margin-top: 20px;
             border-radius: 5px;
-            
+
         }
-        #reset-button:hover {
-            /* box-shadow: 0 0 10px 2px rgb(245, 3, 245), 0 0 5px 2px rgb(245, 3, 245) inset; */
-        }
+
+        /* #reset-button:hover {
+            box-shadow: 0 0 10px 2px rgb(245, 3, 245), 0 0 5px 2px rgb(245, 3, 245) inset;
+        } */
+
         #reset-button:active {
             box-shadow: 0 0 2px 2px plum;
         }
@@ -93,6 +96,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
         }
+
         #card-front:hover {
             background-color: rgba(0, 0, 0, 0.8);
             color: cornsilk;
@@ -116,6 +120,7 @@
             text-align: center;
             color: darkred;
         }
+
         #input:focus {
             box-shadow: 0 0 40px 2px cyan, 0 0 20px 2px cyan inset;
         }
@@ -132,13 +137,15 @@
             margin-top: 20px;
             border-radius: 5px;
         }
+
         #button:hover {
             box-shadow: 0 0 40px 2px lawngreen, 0 0 20px 2px lawngreen inset;
         }
+
         #button:active {
             border: solid;
         }
-        
+
 
         /* ------------- CARD BACK -------------- */
         #card-back {
@@ -158,6 +165,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="reset-container">
         <button id="reset-button">RESET</button>
@@ -181,6 +189,7 @@
     </div>
 
     <script>
+        // variables
         const reset = document.getElementById("reset-button");
         const number = document.getElementById("input");
         const cardback = document.querySelector("#card-back");
@@ -188,21 +197,22 @@
         const container = document.getElementById("outer-container");
 
 
+        // random number
         var num2 = Math.random() * 100;
         num2 = Math.round(num2);
         var counter = 0;
 
+        // reset button
         reset.addEventListener("click", () => {
             window.location.reload();
         });
 
-        
 
+
+        // guess button and main program
         btn.addEventListener("click", () => {
             let num1 = number.value;
-            // console.log(num2);
 
-            
             if (num1 >= 0 && num1 <= 100 && (10 - counter) > 0) {
 
                 if (num1 == num2) {
@@ -231,15 +241,18 @@
                 container.style.transform += "rotateY(180deg)";
             }
 
-            if ((10-counter) == 0) {
+            if ((10 - counter) == 0) {
                 window.location.reload();
                 counter = 0
             };
         });
 
+        // card back-face click and rotate
         cardback.addEventListener("click", () => {
             container.style.transform += "rotateY(180deg)";
         });
+
     </script>
 </body>
+
 </html>
