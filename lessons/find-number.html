@@ -179,5 +179,66 @@
         <div id="shadow"></div>
 
     </div>
+
+    <script>
+        const reset = document.getElementById("reset-button");
+        const number = document.getElementById("input");
+        const cardback = document.querySelector("#card-back");
+        const btn = document.querySelector("#button");
+        const container = document.getElementById("outer-container");
+
+
+        var num2 = Math.random() * 100;
+        num2 = Math.round(num2);
+        var counter = 0;
+
+        reset.addEventListener("click", () => {
+            window.location.reload();
+        });
+
+        
+
+        btn.addEventListener("click", () => {
+            let num1 = number.value;
+            // console.log(num2);
+
+            
+            if (num1 >= 0 && num1 <= 100 && (10 - counter) > 0) {
+
+                if (num1 == num2) {
+                    cardback.innerHTML = `
+                    Tebrikler<br>
+                    ${counter} denemede buldunuz!..`;
+                    container.style.transform += "rotateY(900deg)";
+                } else if (num1 > num2) {
+                    cardback.innerHTML = `
+                    Daha küçük bir sayı giriniz!..<br>
+                    ${10-counter} hakkınız kaldı.`;
+                    container.style.transform += "rotateY(180deg)";
+                    counter++;
+                } else {
+                    cardback.innerHTML = `
+                    Daha büyük bir sayı giriniz!..<br>
+                    ${10-counter} hakkınız kaldı.`;
+                    container.style.transform += "rotateY(180deg)";
+                    counter++;
+                }
+
+            } else {
+                cardback.innerHTML = `
+                Wrong Value!...<br>
+                ${10-counter} hakkınız kaldı.`;
+            }
+
+            if ((10-counter) == 0) {
+                window.location.reload();
+                counter = 0
+            };
+        });
+
+        cardback.addEventListener("click", () => {
+            container.style.transform += "rotateY(180deg)";
+        });
+    </script>
 </body>
 </html>
