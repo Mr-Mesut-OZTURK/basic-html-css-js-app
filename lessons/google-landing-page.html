@@ -5,6 +5,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Landing Page | Mesut OZTURK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #outer-container {}
+
+
+
+        /* -------- HEADER ----------- */
+        header {
+            /* border: solid; */
+            height: 33px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+
+        /* -------- header-left ----------- */
+        .header-left {
+            padding: 15px 25px;
+        }
+
+        .header-left a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.692);
+            margin-right: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+
+        }
+
+        .header-left a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* -------- header-right ----------- */
+        .header-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            margin: 12px 5px 0 0;
+        }
+
+        .header-right a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.877);
+            margin-left: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+
+        .header-right a:hover {
+            text-decoration: underline;
+        }
+
+        #image-link {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+            background-color: white;
+            background-image: url(../image/appicon.png);
+            opacity: 0.5;
+            background-size: 100%;
+            margin-top: -3px;
+            margin-left: 24px;
+        }
+
+        #image-link:hover {
+            opacity: 1.0;
+        }
+
+        #btn-link {
+            display: inline-block;
+            background-color: #4277e9;
+            padding: 7px 14px;
+            color: white;
+            border-radius: 3px;
+            font-weight: bolder;
+            border: none;
+            margin-left: 13px;
+        }
+        #btn-link:hover {
+            text-decoration: none;
+        }
+
+
+
+        /* -------- MAİN ----------- */
+        main {
+            /* border: solid; */
+            height: 560px;
+            padding-top: 195px;
+            text-align: center;
+        }
+
+        #main-inner-container {}
+
+        #google-logo {
+            /* border: solid; */
+        }
+
+        #google-logo img {
+            width: 272px;
+            height: 96px;
+            margin-bottom: 17px;
+        }
+        #search-outer-container {
+            width: 100%;
+            padding: 0 40px;
+        }
+        #search-container {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            border: 1px solid rgba(0, 0, 0, 0.219);
+            width: 514px;
+            margin: auto;
+            border-radius: 30px;
+            padding: 7px 20px 2px 23px;
+            margin-bottom: 30px;
+            position: relative;
+            left: 4px;
+        }
+
+        #search-container:hover {
+            box-shadow: 4px 2px 5px 0 rgba(0, 0, 0, 0.205);
+        }
+
+        #google-magni img {
+            width: 30px;
+        }
+
+        #search-container input {
+            width: 420px;
+            padding: 8px;
+            position: relative;
+            left: -5px;
+            top: -3px;
+            border: none;
+            font-size: 16px;
+        }
+
+        #search-container input:focus {
+            outline: none;
+        }
+
+        #google-mic img {
+            width: 14px;
+            margin-top: 5px;
+        }
+
+        #search-bottom-btn a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 11px 17px;
+            margin: 0 5px;
+            color: rgba(0, 0, 0, 0.623);
+            background-color: rgba(128, 128, 128, 0.137);
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+        #search-bottom-btn a:hover {
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.479);
+        }
+
+        #change-search-lang {
+            margin-top: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            letter-spacing: -1px;
+        }
+
+
+       
+    </style>
 </head>
 <body>
     <div id="outer-container">
