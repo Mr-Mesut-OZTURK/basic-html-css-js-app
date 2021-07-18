@@ -93,9 +93,21 @@
             font-size: 1.5em;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            grid-gap: 5px;
             cursor: pointer;
+            overflow: auto;
         }
+        #list-container ul li.list-item::-webkit-scrollbar {
+            background-color: rgba(0, 0, 139, 0.2);
+            border-radius: 30px;
+            height: 10px;
+        }
+        #list-container ul li.list-item::-webkit-scrollbar-thumb {
+            background-color: darkviolet;
+            border-radius: 10px;
 
+        }
         /* after clicked list item */
         .checked-item {
             margin-bottom: 5px;
