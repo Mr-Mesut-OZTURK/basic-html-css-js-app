@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <title>To Do List | Mesut OZTURK</title>
     <style>
         * {
@@ -15,8 +17,17 @@
         }
 
         body {
-            background:#a8cce9;
-            padding: 0 50px;
+            background: #a8cce9;
+            box-sizing: content-box;
+            padding: 0 10px;
+        }
+
+        #outer-border {
+            max-width: 750px;
+            min-width: 450px;
+            margin: 0 auto;
+            padding: 0 130px;
+            box-sizing: content-box;
             box-sizing: content-box;
         }
 
@@ -27,11 +38,12 @@
             padding: 10px;
             background-color: rgba(0, 0, 139, 0.4);
         }
+
         #outer-container:hover {
             background-color: rgba(0, 0, 139, 0.5);
         }
 
-        #counter { 
+        #counter {
             text-align: center;
             margin-top: 20px;
             font-size: 2em;
@@ -72,7 +84,7 @@
         #input-container button:active,
         #input-container button:hover {
             filter: brightness(2);
-            box-shadow: 2px 2px 3px 2px  rgb(0, 17, 248) ;
+            box-shadow: 2px 2px 3px 2px rgb(0, 17, 248);
         }
 
 
@@ -98,16 +110,19 @@
             cursor: pointer;
             overflow: auto;
         }
+
         #list-container ul li.list-item::-webkit-scrollbar {
             background-color: rgba(0, 0, 139, 0.2);
             border-radius: 30px;
             height: 10px;
         }
+
         #list-container ul li.list-item::-webkit-scrollbar-thumb {
             background-color: darkviolet;
             border-radius: 10px;
 
         }
+
         /* after clicked list item */
         .checked-item {
             margin-bottom: 5px;
@@ -143,9 +158,10 @@
         }
     </style>
 </head>
+
 <body>
 
-    <div style="max-width: 600px;margin: 0 auto;padding:0 20px;box-sizing: content-box;">
+    <div id="outer-border">
         <div id="outer-container">
             <p id="counter">0/1</p>
 
@@ -153,18 +169,17 @@
                 <input type="search" autofocus>
                 <button>ADD</button>
             </div>
-    
+
             <div id="list-container">
                 <ul>
-                    <li class="list-item" 
-                    style="
+                    <li class="list-item" style="
                     font-size: 1.75em;
                     text-decoration: underline;
                     color:saddlebrown;">
                         To Do List
-                        <span >DEL</span>
+                        <span>DEL</span>
                     </li>
-                   
+
                     <li class="list-item">
                         kitap oku
                         <span class="list-close">X</span>
@@ -191,7 +206,7 @@
         function display() {
             let todo = document.getElementsByTagName("li");
             let done = document.getElementsByClassName("checked-item")
-            let screen = (done.length) + "/" + (todo.length-1);
+            let screen = (done.length) + "/" + (todo.length - 1);
             counter.innerHTML = screen;
         }
 
@@ -254,4 +269,5 @@
         });
     </script>
 </body>
+
 </html>
