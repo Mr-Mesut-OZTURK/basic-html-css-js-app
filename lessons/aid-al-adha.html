@@ -1,13 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aid Al-Adha | Mesut OZTURK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rancho&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#8b016a, #6f1159);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #header {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        #header .logo {
+            color: #fff;
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        #header .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header .navigation li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        #header .navigation li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        #header .navigation li a:hover,
+        #header .navigation li a.active {
+            background: #fff;
+            color: #111;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        section img#lamp {
+            mix-blend-mode: screen;
+        }
+
+        section img#masjid {
+            transform: translateY(-20px);
+        }
+
+        section img#stars2 {
+            display: none;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            right: -100%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 10vw;
+            white-space: nowrap;
+            text-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+            font-family: 'Rancho', cursive;
+        }
+
+        .sec {
+            position: relative;
+            padding: 100px;
+            background: #96283a;
+            /* margin: 30px auto; */
+        }
+
+        .sec h2 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 10px;
+            text-align: center;
+            color: wheat;
+        }
+
+        .sec p {
+            font-size: 1em;
+            color: #fff;
+            margin-top: 20px;
+            text-indent: 20px;
+        }
+
+
+        section img#sheep {
+            width: 20%;
+        }
+
+
+        audio {
+            display: none;
+        }
+
+        #playet-btn {
+            text-align: center;
+            position: fixed;
+            top: 10px;
+            left: 50px;
+            z-index: 100000000;
+        }
+
+        #playet-btn button {
+            padding: 5px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 1em;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        #playet-btn button:hover {
+            box-shadow: 0 0 15px 5px rgb(255, 28, 255);
+        }
+
+        #playet-btn button:active {
+            box-shadow: 0 0 5px 2px rgb(255, 28, 255), 0 0 15px 2px rgb(255, 28, 255) inset;
+        }
+
+
+
+
+    </style>
 </head>
+
 <body>
-    
+
     <audio id="player" controls autoplay>
         <source src="./images/Yunus Emre Aşkın Yolculuğu Jenerik Müziği.mp3" type="audio/mp3">
     </audio>
@@ -49,38 +213,38 @@
         </h2>
 
         <p>
-            Bir Kurban Bayramı daha geldi. 
-            Bu bayramın öncelikle milletimize, 
-            İslam alemine ve de insanlığa 
-            hayırlar getirmesini Yüce Allah'tan 
-            diliyoruz. Kardeşliğin doğduğu, 
-            sevgilerin birleştiği, belki durgun, 
-            belki yorgun, yine de mutlu, yine de umutlu, 
+            Bir Kurban Bayramı daha geldi.
+            Bu bayramın öncelikle milletimize,
+            İslam alemine ve de insanlığa
+            hayırlar getirmesini Yüce Allah'tan
+            diliyoruz. Kardeşliğin doğduğu,
+            sevgilerin birleştiği, belki durgun,
+            belki yorgun, yine de mutlu, yine de umutlu,
             yine de sevgi dolu nice bayramlara..
         </p>
 
         <p>
-            Bugün Bayram! Mübarek Kurban Bayramı 
-            Tüm insanlar birbirlerine daha çok yakınlaşsın, 
-            dargınlıklar ortadan kalksın, kardeşlik ve 
-            dostluk duyguları daha da kuvvetlensin. 
-            Tüm insanlar neşe ve mutluluk denizinde yüzsün. 
-            Bugün sevinç günü, kederleri bir yana bırakıp 
-            mutlu olalım. Kurban Bayramı'nı doya doya yaşayalım. 
+            Bugün Bayram! Mübarek Kurban Bayramı
+            Tüm insanlar birbirlerine daha çok yakınlaşsın,
+            dargınlıklar ortadan kalksın, kardeşlik ve
+            dostluk duyguları daha da kuvvetlensin.
+            Tüm insanlar neşe ve mutluluk denizinde yüzsün.
+            Bugün sevinç günü, kederleri bir yana bırakıp
+            mutlu olalım. Kurban Bayramı'nı doya doya yaşayalım.
             Hayırlı bayramlar.
         </p>
-        
+
         <p>
-            Vesile olalım kardeşliğe ve barışa. 
-            Yorulalım hepimiz yarınki uğraşa. 
-            Tat alalım, varalım yüce Allah”a. 
+            Vesile olalım kardeşliğe ve barışa.
+            Yorulalım hepimiz yarınki uğraşa.
+            Tat alalım, varalım yüce Allah”a.
             Erişelim birlikte nice bayramlara.
         </p>
 
         <p>
-            Bir avuç dua, bir kucak sevgi, sıcak bir mesaj 
-            kapatır mesafeleri, birleştirir gönülleri, 
-            bir sıcak gülümseme, bir ufak hediye daha da 
+            Bir avuç dua, bir kucak sevgi, sıcak bir mesaj
+            kapatır mesafeleri, birleştirir gönülleri,
+            bir sıcak gülümseme, bir ufak hediye daha da
             yaklaştırır bizi birbirimize. Nice Kurban Bayramlarına…
         </p>
 
@@ -88,4 +252,5 @@
 
 
 </body>
+
 </html>
