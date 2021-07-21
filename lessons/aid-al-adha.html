@@ -331,6 +331,43 @@
 
     </div>
 
+    <script>
+        let stars = document.querySelector('#stars')
+        let stars2 = document.querySelector('#stars2')
+        let moon = document.querySelector('#moon')
+        let rock = document.querySelector('#rock')
+        let masjid = document.querySelector('#masjid')
+        let bottom = document.querySelector('#bottom')
+        let lamp = document.querySelector('#lamp')
+        let sheep = document.querySelector('#sheep')
+        let text = document.querySelector('#text')
+        let header = document.querySelector('#header')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            stars.style.top = value * 0.05 + "%";
+            moon.style.bottom = value * -0.05 + "px";
+            rock.style.bottom = value * -0.75 + "px";
+            rock.style.bottom = value * -0.15 + "px";
+
+            text.style.right = -100 + value * 0.5 + "%";
+            // text.style.top = 50 + value * 0.1 + "%";
+
+            header.style.top = 50 + value * 0.5 + "px";
+            sheep.style.left = 50 + value * 0.5 + "px";
+        });
+
+
+
+        const toggleMenu = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.onclick = function () {
+            toggleMenu.classList.toggle("active");
+            navigation.classList.toggle("active");
+        }
+    </script>
+
 
 </body>
 
