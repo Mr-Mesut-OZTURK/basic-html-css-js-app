@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +79,7 @@
         #lower-screen::-webkit-scrollbar {
             display: none;
         }
- 
+
 
         /* --------  BUTTON ------------------- */
         #button-container {
@@ -148,6 +149,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="main-container">
         <div id="screen-container">
@@ -178,5 +180,134 @@
         </div>
     </div>
 
+    <script>
+        const upperscreen = document.getElementById("upper-screen");
+        const lowerscreen = document.getElementById("lower-screen");
+        const numbers = document.querySelectorAll(".dark-grey");
+        const operands = document.querySelectorAll(".orange");
+
+        var operand;
+
+        // console.log(operands);
+
+        function main() {
+
+            // when click number
+            numbers.forEach(number => {
+                number.addEventListener("click", () => {
+                    let num = number.innerHTML;
+                    displayScreen(num)
+                });
+            });
+
+            // when click operand button
+            operands.forEach(operand => {
+                operand.addEventListener("click", () => {
+                    let operandIn = operand.innerHTML;
+                    let operandCame = chooseOperand(operandIn)
+                    makeCompute(operandCame)
+                });
+            });
+        }
+
+        // 
+        function makeCompute(params) {
+            let num1 = upperscreen.innerHTML;
+            let num2 = lowerscreen.innerHTML;
+            if (num2 == "") return;
+            if (params == "=") {
+                equalOperand();
+                return
+            };
+            if (num1 != "" && num2 != "" && params) {
+                equalOperand();
+                return
+            };
+
+            upperscreen.innerHTML = num2 + params;
+            lowerscreen.innerHTML = "";
+        }
+
+        // 
+        function equalOperand(params) {
+            let num1 = upperscreen.innerHTML;
+            let num2 = lowerscreen.innerHTML;
+            if (num2 == "" && num1 == "") return;
+            if (num2 == "0" && num1 != "") return;
+
+            upperscreen.innerHTML = "";
+            lowerscreen.innerHTML = eval(num1 + num2);
+        }
+
+
+        // choose operand ( +, -, *, /, =)
+        function chooseOperand(params) {
+
+            switch (params) {
+                case "+":
+                    operand = "+"
+                    break;
+
+                case "-":
+                    operand = "-"
+                    break;
+
+                case "%":
+                    operand = "/"
+                    break;
+
+                case "X":
+                    operand = "*"
+                    break;
+
+                case "=":
+                    operand = "="
+                    break;
+
+                default:
+                    break;
+            }
+
+            return operand;
+
+        }
+
+
+        // Show all compute on screen
+        function displayScreen(params) {
+            let num2 = lowerscreen.innerHTML;
+            if (params == "." && num2.includes(".")) return;
+            if (num2[0] == "0" && num2.length == 1 && params == "0") return;
+            lowerscreen.innerHTML += params;
+        }
+
+
+        // all clear button
+        const ac = document.getElementById("button1");
+        ac.addEventListener("click", () => {
+            lowerscreen.innerHTML = "";
+            upperscreen.innerHTML = "";
+        });
+
+        // change number plus or minus
+        const plusminus = document.getElementById("button2");
+        plusminus.addEventListener("click", () => {
+            let num1 = upperscreen.innerHTML;
+            if (num1[num1.length - 1] == "-") return;
+            lowerscreen.innerHTML *= -1;
+        });
+
+        // delete last item of number
+        const arrow = document.getElementById("button3");
+        arrow.addEventListener("click", () => {
+            let value = lowerscreen.innerHTML;
+            lowerscreen.innerHTML = value.slice(0, -1);
+        });
+
+
+        main();
+    </script>
+
 </body>
+
 </html>
