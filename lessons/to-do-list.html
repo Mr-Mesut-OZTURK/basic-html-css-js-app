@@ -18,16 +18,14 @@
 
         body {
             background: #a8cce9;
-            /* box-sizing: content-box; */
             padding: 0 10px;
         }
 
         #outer-border {
-            width: fit-content;
+            width: auto;
             margin: 0 auto;
             padding: 0 130px;
             box-sizing: content-box;
-            transition-duration: 2s;
         }
 
         #outer-container {
@@ -161,13 +159,13 @@
         @media (max-width:560px) {
 
             #outer-border {
-                /* box-sizing: content-box; */
-                /* border: solid; */
+                width: auto;
                 padding: 5px;
+                min-width: 350px;
             }
 
             #input-container {
-                width: 100%;
+                width: auto;
                 padding: 20px 10px;
                 box-sizing: content-box;
                 margin: 50px auto 20px;
