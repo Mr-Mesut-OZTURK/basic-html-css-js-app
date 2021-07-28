@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/project.css">
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
@@ -67,18 +68,9 @@
 
         <!---------------- MAİN -------------->
         <main id="main-main">
-            <style>
-                h2 {
-                    text-align: center;
-                    font-size: 3em;
-                    margin-top: 30%;
-                    font-size: 72px;
-                    background: -webkit-linear-gradient(purple, orange);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            </style>
-            <h2>GALERİ SAYFASI YAPIM AŞAMASINDADIR</h2>
+            <section id="projects-container">
+
+            </section>
         </main>
 
         <!---------------- FOOTER -------------->
@@ -87,6 +79,63 @@
         </footer>
 
     </div>
+
+    <script>
+        let projects = [
+            "ios-calculator",
+            "moon-light-parallax",
+            "aid-al-adha",
+            "to-do-list",
+            "find-number",
+            "facebook-sign-in", 
+            "instagram-sign-in",
+            "google-landing-page" 
+        ];
+
+        const psection = document.getElementById("projects-container");
+
+
+        projects.forEach(element => {
+
+            // create img and add class
+            let img = document.createElement("IMG");
+            let imgSrc ="./media/project-images/" + element + ".jpg"
+            img.src = imgSrc;
+            
+            // create text and h3
+            let text = document.createTextNode(element);
+            let h3 = document.createElement("H3");
+            h3.appendChild(text);
+
+            // creaate article and add class
+            let article = document.createElement("ARTICLE");
+            article.classList.add("project-content")
+            
+            // add h3 inside article
+            article.appendChild(h3);
+            
+            // create div and add class
+            let div = document.createElement("DIV");
+            div.classList.add("card-container")
+
+            // add img and article inside div
+            div.appendChild(img);
+            div.appendChild(article);
+
+
+            // create link, give class and add all inside link
+            let link = document.createElement("A");
+            link.classList.add("project-link");
+            link.appendChild(div);
+
+            // ADD ALL INSIDE PROJECT PAGE
+            psection.appendChild(link)
+
+            console.log(link);
+
+           
+        });
+    </script>
 </body>
 
 </html>
