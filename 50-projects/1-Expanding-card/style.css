@@ -1,11 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#card-container {
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
 
+#card-container {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.card {
+    flex: 1;
+    height: 90vh;
+    border-radius: 50px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition:flex 700ms ease-in;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    display: none;
+    font-family: 'Muli', sans-serif;
+}
+
+.card.active h3 {
+    display: block;
+}
+ 
+.card.active {
+    flex: 10;
 }
 
 .card:nth-of-type(1){
@@ -26,4 +70,17 @@
 
 .card:nth-of-type(5){
     background: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+@media (max-width:540px) {
+
+    .card.active {
+        width: 60vw;
+    }
+
+    .card:nth-of-type(4),
+    .card:nth-of-type(5) {
+        display: none;
+    }
+
 }
