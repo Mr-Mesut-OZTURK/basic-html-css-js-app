@@ -31,7 +31,7 @@
     background: linear-gradient(#1fa2ff, #12d8fa, #a6ffcb);
     background-attachment: fixed;
     box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.205);
-    height: 600px;
+    min-height: 450px;
     overflow: hidden;
     
 

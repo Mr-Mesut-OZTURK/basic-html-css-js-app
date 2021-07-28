@@ -78,10 +78,7 @@
 
                         <article class="project-content">
                             <h3>Netflix surver form</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit.
-                            </p>
+                           
                         </article>
                     </div>
                 </a>
@@ -114,22 +111,43 @@
 
         projects.forEach(element => {
 
-            psection.innerHTML += `
-            <a href="./lessons/${element}.html" class="project-link">
-                    <div class="card-container">
+            // create img and add class
+            let img = document.createElement("IMG");
+            let imgSrc ="./media/project-images/" + element + ".jpg"
+            img.src = imgSrc;
+            
+            // create text and h3
+            let text = document.createTextNode(element);
+            let h3 = document.createElement("H3");
+            h3.appendChild(text);
 
-                        <img src="./media/project-images/${element}.jpg" alt="">
+            // creaate article and add class
+            let article = document.createElement("ARTICLE");
+            article.classList.add("project-content")
+            
+            // add h3 inside article
+            article.appendChild(h3);
+            
+            // create div and add class
+            let div = document.createElement("DIV");
+            div.classList.add("card-container")
 
-                        <article class="project-content">
-                            <h3>${element}</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit.
-                            </p>
-                        </article>
-                    </div>
-                </a>
-            `
+            // add img and article inside div
+            div.appendChild(img);
+            div.appendChild(article);
+
+
+            // create link, give class and add all inside link
+            let link = document.createElement("A");
+            link.classList.add("project-link");
+            link.appendChild(div);
+
+            // ADD ALL INSIDE PROJECT PAGE
+            psection.appendChild(link)
+
+            console.log(link);
+
+           
         });
     </script>
 </body>
