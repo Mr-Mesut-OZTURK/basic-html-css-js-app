@@ -82,14 +82,7 @@
 
     <script>
         let projects = [
-            "ios-calculator",
-            "moon-light-parallax",
-            "aid-al-adha",
-            "to-do-list",
-            "find-number",
-            "facebook-sign-in", 
-            "instagram-sign-in",
-            "google-landing-page" 
+            "expanding-card"
         ];
 
         const psection = document.getElementById("projects-container");
@@ -99,11 +92,12 @@
 
             // create img and add class
             let img = document.createElement("IMG");
-            let imgSrc ="./media/project-images/" + element + ".jpg"
+            let imgSrc ="./50-projects/media/project-images/" + element + ".jpg"
             img.src = imgSrc;
             
             // create text and h3
-            let text = document.createTextNode(element);
+            let newElement = element.replaceAll("-", " ")
+            let text = document.createTextNode(newElement);
             let h3 = document.createElement("H3");
             h3.appendChild(text);
 
@@ -126,6 +120,8 @@
             // create link, give class and add all inside link
             let link = document.createElement("A");
             link.classList.add("project-link");
+            let href1 = "./50-projects/" + element + "/" + element +".html"
+            link.href = href1;
             link.appendChild(div);
 
             // ADD ALL INSIDE PROJECT PAGE
