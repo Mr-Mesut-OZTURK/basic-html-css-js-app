@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #aaa;
+  color: #222;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#outer-container {
+  background-color: purple;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#outer-container.rotate {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+#circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+#circle {
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#outer-container.rotate #circle-container {
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#circle button {
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  font-size: 2em;
+}
+
+#circle button:hover {
+  color: wheat;
+}
+
+.open {
+  top: 120px;
+  right: 40px;
+}
+
+.close {
+  bottom: 40px;
+  right: 120px;
+}
+
+#content {
+  padding: 100px 50px 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#content h1 {
+  color: white;
+  margin: 20px 0;
+}
+
+#content small {
+  display: inline-block;
+  color: wheat;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+#content p {
+  color: white;
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+#content h3 {
+  margin: 20px auto 5px;
+}
+
+#content img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 60vh;
+  left: -250px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+nav ul li i {
+  color: wheat;
+  margin-right: 15px;
+}
+
+nav ul li:hover,
+nav ul li:hover i {
+  color: plum;
+}
+
+#outer-container.rotate + nav {
+  left: 0;
+}
+
+#outer-container.rotate + nav ul li:nth-of-type(2) {
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+}
+
+#outer-container.rotate + nav ul li:nth-of-type(3) {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+/*# sourceMappingURL=style.css.map */
