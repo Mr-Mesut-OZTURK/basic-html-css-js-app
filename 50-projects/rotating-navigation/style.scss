@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aaa;
+    width: 100vw;
+    height: 100vh;
+}
+
+#outer-container {
+    background-color: purple;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+// ------ CIRCLE CONTAINER ---------
+#circle-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -100px;
+    left: -100px;
+}
+
+#circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: orange;
+    position: relative;
+}
+
+#circle button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.open {
+    top: 120px;
+    right: 40px;
+}
+
+.close {
+    bottom: 20px;
+    right: 50%;
+}
