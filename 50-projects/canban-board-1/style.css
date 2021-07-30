@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #a8cce9;
+    padding: 0 10px;
+}
+
+#outer-border {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 130px;
+    box-sizing: content-box;
+}
+
+#outer-container {
+    max-width: 500px;
+    min-width: 300px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 139, 0.4);
+}
+
+#outer-container:hover {
+    background-color: rgba(0, 0, 139, 0.5);
+}
+
+#counter {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    margin-bottom: -20px;
+    color: blanchedalmond;
+}
+
+/* ---------- input-contaiener ----------------- */
+#input-container {
+    padding: 20px 5px;
+    margin: 50px auto 20px;
+    display: grid;
+    grid-template-columns: 80% min-content;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 10px;
+    background-color: #db49ac;
+    width: 150%;
+    margin-left: -25%;
+    transition-duration: 2s;
+}
+
+#input-container input {
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    outline-color: #db49ac;
+    border-radius: 5px;
+}
+
+#input-container button {
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+    box-sizing: content-box;
+    border-radius: 5px;
+    border: none;
+}
+
+#input-container button:active,
+#input-container button:hover {
+    filter: brightness(2);
+    box-shadow: 2px 2px 3px 2px rgb(0, 17, 248);
+}
+
+
+/* ---------- input-contaiener ----------------- */
+#list-container {
+    padding: 10px;
+    margin: 50px auto 20px;
+}
+
+#list-container ul {
+    list-style: none;
+    padding: 5px;
+}
+
+#list-container ul li.list-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 5px;
+    cursor: pointer;
+    overflow: auto;
+}
+
+#list-container ul li.list-item::-webkit-scrollbar {
+    background-color: rgba(0, 0, 139, 0.2);
+    border-radius: 30px;
+    height: 10px;
+}
+
+#list-container ul li.list-item::-webkit-scrollbar-thumb {
+    background-color: darkviolet;
+    border-radius: 10px;
+
+}
+
+/* after clicked list item */
+.checked-item {
+    margin-bottom: 5px;
+    background-color: sienna;
+    text-decoration: line-through;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#list-container ul li:hover {
+    background-color: rgb(199, 115, 77);
+}
+
+#list-container ul li:active {
+    background-color: rgb(233, 171, 143);
+}
+
+#list-container ul li span.list-close {
+    background-color: sienna;
+    text-decoration: none;
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#list-container ul li span.list-close:hover {
+    background-color: red;
+    visibility: visible;
+}
+
+@media (max-width:560px) {
+
+    #outer-border {
+        width: auto;
+        padding: 5px;
+        min-width: 350px;
+    }
+
+    #input-container {
+        width: auto;
+        padding: 20px 10px;
+        box-sizing: content-box;
+        margin: 50px auto 20px;
+        display: grid;
+        grid-template-columns: 80% min-content;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-gap: 10px;
+        background-color: #db49ac;
+        width: 90%;
+    }
+}
