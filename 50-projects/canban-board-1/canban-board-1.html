@@ -8,37 +8,75 @@
 </head>
 <body>
     
-    <div id="outer-border">
+    <div id="outer-container">
 
-        <div id="outer-container">
+        <h1>canban board</h1>
 
-            <p id="counter">0/1</p>
+        <div class="outer-box-container">
 
-            <div id="input-container">
-                <input type="search" autofocus>
-                <button>ADD</button>
-            </div>
+            <h3>to do</h3>
 
-            <div id="list-container">
+            <section class="input-container">
+                <input class="text">
+                <button class="btnin todo-btn">+</button>
+            </section>
 
-                <ul>
-                    <li class="list-item" style="
-                    font-size: 1.75em;
-                    text-decoration: underline;
-                    color:saddlebrown;">
-                        To Do List
-                        <span>DEL</span>
-                    </li>
+            <div id="todo-container" class="box-container">
+                <div id="box" class="card" draggable="true">
+                    <p contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quam ex
+                        optio delectus at
+                        distinctio repellendus illum laborum accusamus aut! Dignissimos amet, ut esse pariatur eum quam
+                        repudiandae dolores dolorum?
+                        Omnis labore suscipit laboriosam sunt, quidem necessitatibus at eveniet, sequi consequuntur
+                        magni in quia reprehenderit non aliquid magnam cumque odio cupiditate quasi porro tempore aut,
+                        officiis voluptas perspiciatis laborum? Corrupti!
+                        Odio facilis beatae maxime quisquam odit at eum optio voluptatibus corporis doloribus fugit
+                        laborum ut dolorem consequuntur alias hic porro corrupti, libero debitis quae! Vel asperiores
+                        tenetur voluptatibus quia iusto.
+                        Enim quos eligendi ratione facere minus tempore nostrum iure delectus beatae, quaerat voluptate
+                        dicta ea ipsam rerum, sunt nulla dolore, obcaecati exercitationem. Similique praesentium ipsum
+                        assumenda quis totam, cupiditate facilis.
+                        Sapiente, reiciendis. Temporibus tenetur reprehenderit repudiandae eius labore minus vitae,
+                        libero voluptatibus fuga dicta? Assumenda voluptates obcaecati repellat ea quae ducimus nesciunt
+                        in laboriosam nemo vel! Debitis laborum vero id?</p>
+                    <button class="delitem">del</button>
+                </div>
 
-                    <li class="list-item">
-                        kitap oku
-                        <span class="list-close">X</span>
-                    </li>
-                </ul>
+                <div id="box" class="card" draggable="true">
+                    <p contenteditable="true">Deneme yazısı</p>
+                    <button class="delitem">del</button>
+                </div>
 
             </div>
 
         </div>
+
+        <div class="outer-box-container">
+
+            <h3>doing</h3>
+
+            <section class="input-container">
+                <input class="text">
+                <button class="btnin todo-btn">+</button>
+            </section>
+
+            <div id="doing-container" class="box-container"></div>
+
+        </div>
+
+        <div class="outer-box-container">
+
+            <h3>done</h3>
+
+            <section class="input-container">
+                <input class="text">
+                <button class="btnin todo-btn">+</button>
+            </section>
+
+            <div id="done-container" class="box-container"></div>
+
+        </div>
+
 
     </div>
 
