@@ -2,168 +2,238 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #a8cce9;
-    padding: 0 10px;
-}
-
-#outer-border {
-    width: auto;
-    margin: 0 auto;
-    padding: 0 130px;
-    box-sizing: content-box;
+    background-color: #ddd;
 }
 
 #outer-container {
-    max-width: 500px;
+    max-width: 90vw;
     min-width: 300px;
+    min-height: 90vh;
+    padding: 20px;
     margin: 50px auto;
-    padding: 10px;
-    background-color: rgba(0, 0, 139, 0.4);
-}
-
-#outer-container:hover {
-    background-color: rgba(0, 0, 139, 0.5);
-}
-
-#counter {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
-    margin-bottom: -20px;
-    color: blanchedalmond;
-}
-
-/* ---------- input-contaiener ----------------- */
-#input-container {
-    padding: 20px 5px;
-    margin: 50px auto 20px;
+    /* background-color: rgba(137, 43, 226, 0.3); */
     display: grid;
-    grid-template-columns: 80% min-content;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    justify-content: center;
     align-items: center;
     grid-gap: 10px;
-    background-color: #db49ac;
-    width: 150%;
-    margin-left: -25%;
-    transition-duration: 2s;
+    /* transition: grid 2s linear; */
 }
 
-#input-container input {
-    padding: 10px;
-    font-size: 1.5em;
-    border: none;
-    outline-color: #db49ac;
+#outer-container h1 {
+    grid-column: 1/ span 3;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    background-color: darkblue;
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+.outer-box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+
+/* -------------- INPUT CONTAINER ----------------- */
+.input-container {
+    display: grid;
+    grid-template-columns: minmax(min-content, 100%) min-content;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.input-container input {
     border-radius: 5px;
-}
-
-#input-container button {
+    border: none;
+    outline-color: rgba(63, 63, 250, 0.603);
     padding: 5px 10px;
-    font-weight: bold;
+    text-align: center;
+}
+
+.btnin {
+    border: 2px dashed;
+    padding: 0 20px;
+    background-color: transparent;
+    cursor: pointer;
     font-size: 1.5em;
-    box-sizing: content-box;
-    border-radius: 5px;
-    border: none;
 }
 
-#input-container button:active,
-#input-container button:hover {
-    filter: brightness(2);
-    box-shadow: 2px 2px 3px 2px rgb(0, 17, 248);
+.btnin:hover {
+    background-color: rgba(48, 238, 10, 0.5);
+}
+
+.btnin:active {
+    transform: scale(1.2, 1.2);
 }
 
 
-/* ---------- input-contaiener ----------------- */
-#list-container {
+/* -------------- H3 (HEADER) ----------------- */
+.outer-box-container h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: -10px;
+    padding: 10px 0;
+    background-color: steelblue;
+    color: black;
+    pointer-events: none;
+}
+
+
+/* -------------- BOX CONTAINER ----------------- */
+.box-container {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    grid-gap: 10px;
     padding: 10px;
-    margin: 50px auto 20px;
+    overflow: auto;
+    margin-bottom: 40px;
+    background-color: snow;
+    border-radius: 5px;
 }
 
-#list-container ul {
-    list-style: none;
-    padding: 5px;
+.box-container::-webkit-scrollbar {
+    display: none;
 }
 
-#list-container ul li.list-item {
-    padding: 5px;
-    margin-bottom: 5px;
-    font-size: 1.5em;
+#todo-container {
+    background-color: rgba(112, 128, 144, 0.5);
+}
+
+#doing-container {
+    background-color: rgba(87, 189, 87, 0.5);
+}
+
+#done-container {
+    background-color: rgba(70, 131, 180, 0.5);
+}
+
+
+
+/* ------------------- CARD ------------------- */
+.card {
+    width: 100%;
+    min-width: 200px;
+    height: 100px;
+    padding: 10px;
+    background-color: snow;
+    cursor: move;
+    margin: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-gap: 5px;
-    cursor: pointer;
+    grid-gap: 10px;
+    flex-wrap: nowrap;
+    box-shadow: 2px 2px 5px 1px black;
+    border-radius: 2px;
+
+}
+
+.card:hover {
+    box-shadow: 3px 3px 8px 1px black;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+#todo-container .card {
+    background-color: rgb(247, 104, 104);
+}
+
+#doing-container .card {
+    background-color: rgb(76, 79, 236);
+}
+
+#done-container .card {
+    background-color: rgb(79, 180, 70);
+}
+
+#doing-container .card.checked,
+#todo-container .card.checked,
+#done-container .card.checked {
+    background-color: white;
+}
+
+.card.checked p {
+    text-decoration: line-through;
+}
+
+.card p {
+    /* border: solid; */
     overflow: auto;
+    max-height: 90%;
+    display: flex;
+    cursor: text;
+    outline: none;
 }
 
-#list-container ul li.list-item::-webkit-scrollbar {
-    background-color: rgba(0, 0, 139, 0.2);
-    border-radius: 30px;
-    height: 10px;
-}
-
-#list-container ul li.list-item::-webkit-scrollbar-thumb {
-    background-color: darkviolet;
+.card p::-webkit-scrollbar {
+    background-color: rgb(207, 27, 147);
+    width: 10px;
     border-radius: 10px;
 
 }
 
-/* after clicked list item */
-.checked-item {
-    margin-bottom: 5px;
-    background-color: sienna;
-    text-decoration: line-through;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
+.card p::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
-#list-container ul li:hover {
-    background-color: rgb(199, 115, 77);
+.card p::-webkit-scrollbar-button {
+    display: none;
 }
 
-#list-container ul li:active {
-    background-color: rgb(233, 171, 143);
+
+.card button {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(255, 1, 1);
+    cursor: pointer;
 }
 
-#list-container ul li span.list-close {
-    background-color: sienna;
-    text-decoration: none;
-    color: transparent;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    text-align: center;
+.card button:hover {
+    box-shadow: 1px 1px 3px 1px black;
 }
 
-#list-container ul li span.list-close:hover {
-    background-color: red;
-    visibility: visible;
+.card button:active {
+    transform: scale(1.2, 1.2);
 }
 
-@media (max-width:560px) {
 
-    #outer-border {
-        width: auto;
-        padding: 5px;
-        min-width: 350px;
+
+@media (max-width: 900px) {
+    #outer-container {
+        grid-template-columns: minmax(250px, 1fr);
     }
 
-    #input-container {
-        width: auto;
-        padding: 20px 10px;
-        box-sizing: content-box;
-        margin: 50px auto 20px;
-        display: grid;
-        grid-template-columns: 80% min-content;
-        justify-content: space-evenly;
-        align-items: center;
-        grid-gap: 10px;
-        background-color: #db49ac;
-        width: 90%;
+    #outer-container h1 {
+        grid-column: 1;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 460px) {
+    #button-container {
+        flex-direction: row;
+        border: solid;
+        margin-top: 20px;
     }
 }
