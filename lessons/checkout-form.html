@@ -7,6 +7,118 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Checkout</h1>
+    <div id="main-outer-container">
+
+        <div id="form-container">
+
+            <form action="" method="get" autocomplete="off">
+                <h3>Contact information</h3>
+
+                <label for="email">Email</label>
+                <div class="input-container">
+                    <span class="fas fa-envelope"></span>
+                    <input id="email" name="email" type="email" placeholder="Enter your email..." required>
+                </div>
+
+                <label for="phone">Phone</label>
+                <div class="input-container">
+                    <span class="fas fa-phone-alt"></span>
+                    <input id="phone" name="phone" type="text" placeholder="Enter your phone..." required>
+                </div>
+
+
+                <h3>Shipping address</h3>
+
+                <label for="name">Full name</label>
+                <div class="input-container">
+                    <span class="fas fa-user"></span>
+                    <input id="name" name="name" type="text" placeholder="Enter your Full name..." required>
+                </div>
+
+                <label for="address">Address</label>
+                <div class="input-container">
+                    <span class="fas fa-home"></span>
+                    <input id="address" name="address" type="text" placeholder="Enter your address..." required>
+                </div>
+
+                <label for="city">City</label>
+                <div class="input-container">
+                    <span class="fas fa-city"></span>
+                    <input id="city" name="city" type="text" placeholder="Enter your city..." required>
+                </div>
+
+
+                <div id="country-info">
+
+                    <div>
+                        <label for="country">Country</label>
+                        <div class="input-container country-container">
+                            <span class="fas fa-globe-europe"></span>
+                            <select name="country" id="country">
+                                <option value="turkey">Turkey</option>
+                                <option value="germany">Germany</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">UK</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="pcode">Post Code</label>
+                        <div class="input-container">
+                            <span class="fas fa-mail-bulk"></span>
+                            <input id="pcode" name="pcode" type="text" placeholder="Enter your postal code..." required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="checkbox-container">
+                    <input type="checkbox" name="accept" id="accept">
+                    <label for="accept">See this information next time</label>
+                </div>
+
+                <div id="btn-container">
+                    <button type="submit">Continue</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="shopping-container">
+            <div class="card">
+                <img src="./images/photo1.png" alt="">
+                <div class="shopinfo">
+                    <h4>Vintage Backbag</h4>
+                    <p>$54.99 <span>$94.99</span></p>
+                    <div class="plusminus"><button>-</button><span>1</span><button>+</button></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/photo2.png" alt="">
+                <div class="shopinfo">
+                    <h4>Levi Shoes</h4>
+                    <p>$74.99 <span>$124.99</span></p>
+                    <div class="plusminus"><button>-</button><span>1</span><button>+</button></div>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <p class="totalinfo">
+                    <span>Shipping</span>
+                    <span>$19</span>
+                </p>
+
+                <p class="totalinfo">
+                    <span>Total</span>
+                    <span>$148.98</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
