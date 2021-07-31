@@ -230,7 +230,27 @@
 
         /* .card-info span {} */
 
-      
+        @media (max-width:920px) {
+            #main-outer-container {
+                /* grid-template-columns: 1fr; */
+                display: flex;
+                flex-direction: column-reverse;
+                width: auto;
+                justify-content: center;
+                /* align-items: center; */
+                padding: 10px 10px;
+                /* border: solid; */
+            }
+
+            .input-container span {
+                text-align: left;
+            }
+
+            #shopping-container {
+                width: auto;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
