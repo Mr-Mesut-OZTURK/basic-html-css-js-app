@@ -1,4 +1,4 @@
-        // #############  TO CREATE NEW ELEMENT ##################
+       // #############  TO CREATE NEW ELEMENT ##################
 
         const inputText = document.querySelectorAll(".text")
         const btnin = document.querySelectorAll(".btnin");
