@@ -112,7 +112,7 @@ body {
 
 nav {
   position: fixed;
-  top: 60vh;
+  top: 80vh;
   left: -250px;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
