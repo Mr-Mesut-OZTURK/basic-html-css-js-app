@@ -1,0 +1,34 @@
+@media (max-width:768px) {
+
+    nav {
+        .right-nav {
+            display: none;
+        }
+
+        span.fas {
+            display: initial;
+ 
+        }
+    }
+
+    main {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width:270px) {
+
+    main {
+        .left-main {
+
+            h1,
+            p {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 32px;
+            }
+        }
+    }
+}
