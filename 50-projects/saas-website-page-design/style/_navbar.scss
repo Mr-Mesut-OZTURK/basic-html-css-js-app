@@ -1,0 +1,43 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+    .left-nav {
+
+        h3 {
+            font-size: 2em;
+            font-weight: lighter;
+        }
+    }
+
+    .right-nav {
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 0 15px;
+
+            &:hover {
+                color: $greenColor;
+            }
+
+            &.nav-btn {
+                @include buttonGreen;
+
+                &:hover {
+                    background-color: $redColor;
+                }
+            }
+        }
+
+
+    }
+
+    span.fas {
+        display: none;
+        font-size: 2em;
+    }
+
+}
