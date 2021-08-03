@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+nav .left-nav h3 {
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+nav .right-nav a {
+  text-decoration: none;
+  color: black;
+  padding: 0 15px;
+}
+
+nav .right-nav a:hover {
+  color: #00cc66;
+}
+
+nav .right-nav a.nav-btn {
+  background-color: #00cc66;
+  padding: 12px 20px;
+  border-radius: 3px;
+  color: white;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+nav .right-nav a.nav-btn:hover {
+  background-color: #fb4b4e;
+}
+
+nav span.fas {
+  display: none;
+  font-size: 2em;
+}
+
+#outer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 0;
+  grid-gap: 10px;
+}
+
+main .left-main h1 {
+  font-size: 4em;
+  color: #00cc66;
+}
+
+main .left-main h3 {
+  font-size: 4em;
+}
+
+main .left-main p {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+main .left-main a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #00cc66;
+  padding: 12px 20px;
+  border-radius: 3px;
+  color: white;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+main .left-main a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: red;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  z-index: -1;
+  border-radius: 3px;
+  visibility: hidden;
+}
+
+main .left-main a:hover:after {
+  width: 100%;
+  visibility: visible;
+}
+
+main .right-main img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav .right-nav {
+    display: none;
+  }
+  nav span.fas {
+    display: initial;
+  }
+  main {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 270px) {
+  main .left-main h1,
+  main .left-main p {
+    font-size: 24px;
+  }
+  main .left-main h3 {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
