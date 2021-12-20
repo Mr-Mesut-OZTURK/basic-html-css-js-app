@@ -16,9 +16,11 @@
 #main-main {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #757f9a, #d7dde8);
+    /* background: linear-gradient(to bottom right, #757f9a, #d7dde8); */
+    background-color: #fff;
     background-attachment: fixed;
-    padding: 100px 10px;
+    /* padding: 100px 10px; */
+    /* padding-top: 60px; */
 }
 
 
